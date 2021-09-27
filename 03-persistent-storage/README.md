@@ -1,34 +1,40 @@
 # Persistent Storage
 
+* Set default namespace to context
+
+```shell
+kubectl config set-context --current --namespace=<YOUR-NAMESPACE>
+```
+
 * Deploy Persistent Volume Claim
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" apply -f pvc.yaml
-kubectl -n "YOUR-NAMESPACE" get -f pvc.yaml
+kubectl apply -f pvc.yaml
+kubectl get -f pvc.yaml
 ```
 
 * Deploy Application and Service
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" apply -f deployment.yaml
-kubectl -n "YOUR-NAMESPACE" get -f deployment.yaml
+kubectl apply -f deployment.yaml
+kubectl get -f deployment.yaml
 
-kubectl -n "YOUR-NAMESPACE" apply -f service.yaml
-kubectl -n "YOUR-NAMESPACE" get -f service.yaml
+kubectl apply -f service.yaml
+kubectl get -f service.yaml
 ```
 
 * Show Persistent Volume Claim and details of Deployment
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" get pod,pvc,deploy,svc
-kubectl -n "YOUR-NAMESPACE" describe pvc first-storage
-kubectl -n "YOUR-NAMESPACE" describe deployment webserver-with-storage
+kubectl get pod,pvc,deploy,svc
+kubectl describe pvc first-storage
+kubectl describe deployment webserver-with-storage
 ```
 
 * add Data to Pod and delete Pod
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" exec -it "POD" -- /bin/bash
+kubectl exec -it "POD" -- /bin/bash
 ```
 
 #Inside Container
@@ -67,7 +73,7 @@ exit
 * Open new Terminal and Port Forward to Service
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" port-forward svc/webserver-with-storage 8080:80
+kubectl port-forward svc/webserver-with-storage 8080:80
 ```
 
 * Open your Browser and check http://localhost:8080
@@ -75,13 +81,13 @@ kubectl -n "YOUR-NAMESPACE" port-forward svc/webserver-with-storage 8080:80
 * Open another terminal and delete pod
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" delete "pod"
+kubectl delete "pod"
 ```
 
 * Check if port-forward is still working, if not, reopen new
 
 ```shell
-kubectl -n "YOUR-NAMESPACE" port-forward svc/webserver-with-storage 8080:80
+kubectl port-forward svc/webserver-with-storage 8080:80
 ```
 
 * Open your Browser again http://localhost:8080

@@ -1,4 +1,4 @@
-# golem-workshop
+# golem-workshop-module-1
 
 ## Workshop requirements
 
