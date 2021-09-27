@@ -1,0 +1,14 @@
+{
+    "name": "bhofmann/web",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Bastian Hofmann",
+            "email": "bashofmann@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.7.1",
+        "guzzlehttp/guzzle": "6.5.5"
+    }
+}

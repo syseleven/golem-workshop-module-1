@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver-with-storage
+  labels:
+    app: webserver-with-storage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webserver-with-storage
+  template:
+    metadata:
+      labels:
+        app: webserver-with-storage
+    spec:
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: first-storage
+      containers:
+        - name: webserver-with-storage
+          image: nginx
+          ports:
+            - containerPort: 80
+              name: http
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 128Mi
+          volumeMounts:
+            - mountPath: "/usr/share/nginx/html"
+              name: data
