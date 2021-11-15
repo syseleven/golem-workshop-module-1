@@ -1,4 +1,8 @@
-# golem-workshop-module-1
+# Dive-In Kubernetes: Basic Concepts
+
+## Beschreibungstext
+
+In diesem Dive-In Workshop bekommt ihr einen Überblick über das Basiskonzept von Kubernetes, Grundlagen von Containern und vielen anderen Ressourcen vermittlet. Darüber hinaus sprechen wir über aktuelles Tooling und stellen einige kurz vor.
 
 ## Workshop requirements
 
