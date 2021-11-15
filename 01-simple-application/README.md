@@ -14,7 +14,7 @@ docker run --rm -p 8080:80 syseleven/k8s-workshop-web-application:1.0.0
 ```
 
 * Go to http://localhost:8080
-* Deploy application
+* Deploy application and service
 
 ```shell
 kubectl apply -f web-application/deployment/
@@ -45,7 +45,7 @@ kubectl get deployment web-application -o yaml
 
 ```shell
 kubectl get replicasets
-kubectl describe replicasets
+kubectl describe replicasets web-application-xxx
 ```
 
 * See Status of Pods
