@@ -5,6 +5,8 @@
 * Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 * Try connection
 
+* Check versions of local installation and remote server
+  
 ```shell
 kubectl version
 ```

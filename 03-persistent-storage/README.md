@@ -1,9 +1,15 @@
 # Persistent Storage
 
-* Set default namespace to context
+* Set proper context and namespace 
 
-```shell
-kubectl config set-context --current --namespace=<YOUR-NAMESPACE>
+```sh
+kubectl config set-context --current --namespace="YOUR-NAMESPACE"
+```
+
+* Show available storageclasses
+
+```sh
+kubectl get storageclass
 ```
 
 * Deploy Persistent Volume Claim
@@ -37,11 +43,12 @@ kubectl describe deployment webserver-with-storage
 kubectl exec -it "POD" -- /bin/bash
 ```
 
-#Inside Container
+## Inside Container
 
-```
-curl localhost
-cat /usr/share/nginx/html/index.html
+```sh
+curl localhost # should response with 403 Forbidden since NGINX is not allowed to list directory and no index.html is available
+
+cat /usr/share/nginx/html/index.html # should be emtpy since we've mounted a clean storage into our container 
 
 echo '
 <!DOCTYPE html>
@@ -68,7 +75,7 @@ curl localhost
 exit
 ```
 
-# Outside Container
+## Outside Container
 
 * Open new Terminal and Port Forward to Service
 
@@ -91,4 +98,4 @@ kubectl port-forward svc/webserver-with-storage 8080:80
 ```
 
 * Open your Browser again http://localhost:8080
-* You should receive the same result
+* You should receive the same result since PVC left untouched
