@@ -3,7 +3,7 @@
 * Set proper context and namespace 
 
 ```sh
-kubectl create ns djarosch
+kubectl create ns "YOUR-NAME"
 kubectl config set-context --current --namespace="YOUR-NAMESPACE"
 ```
 
