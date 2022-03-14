@@ -35,7 +35,7 @@ kubectl config set-context --current --namespace=<YOUR_NAME>
 cat ~/.kube/config
 ```
 
-* Verify that helm is installed (should be 3.x.x)
+* Verify that [helm is installed](https://helm.sh/docs/intro/install/) (should be 3.x.x)
 
 ```shell
 helm version
