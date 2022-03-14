@@ -3,8 +3,8 @@
 * Set proper context and namespace 
 
 ```sh
-kubectl create ns "YOUR-NAME"
-kubectl config set-context --current --namespace="YOUR-NAMESPACE"
+kubectl create ns <YOUR-NAME>
+kubectl config set-context --current --namespace=<YOUR-NAMESPACE>
 ```
 
 * Show available storageclasses
@@ -41,7 +41,7 @@ kubectl describe deployment webserver-with-storage
 * add Data to Pod and delete Pod
 
 ```shell
-kubectl exec -it "POD" -- /bin/bash
+kubectl exec -it <POD> -- /bin/bash
 ```
 
 ## Inside Container
@@ -89,7 +89,7 @@ kubectl port-forward svc/webserver-with-storage 8080:80
 * Open another terminal and delete pod
 
 ```shell
-kubectl delete "pod"
+kubectl delete pod <POD>
 ```
 
 * Check if port-forward is still working, if not, reopen new
