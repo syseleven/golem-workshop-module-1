@@ -20,13 +20,13 @@ kubectl get namespaces
 * Create Namespace
 
 ```shell
-kubectl create namespace <YOUR_NAME>
+kubectl create namespace <YOURNAME>
 ```
 
 * Set default namespace to context
 
 ```shell
-kubectl config set-context --current --namespace=<YOUR_NAME>
+kubectl config set-context --current --namespace=<YOURNAME>
 ```
 
 * See change in kubeconfig
