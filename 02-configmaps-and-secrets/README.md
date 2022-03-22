@@ -3,8 +3,8 @@
 * If you haven´t done yet create and set your namespace
 
 ```shell
-kubectl create ns <MY-NAMESPACE>
-kubectl config set-context --current --namespace=<MY-NAMESPACE>
+kubectl create ns <YOURNAME>
+kubectl config set-context --current --namespace=<YOURNAME>
 ```
 
 * Deploy application
