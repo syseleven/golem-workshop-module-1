@@ -17,6 +17,8 @@ docker run --rm -p 8080:80 syseleven/k8s-workshop-web-application:1.0.0
 * Deploy application and service
 
 ```shell
+kubectl create ns <MY-NAMESPACE>
+kubectl config set-context --current --namespace=<MY-NAMESPACE>
 kubectl apply -f web-application/deployment/
 ```
 
