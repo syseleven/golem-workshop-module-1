@@ -14,7 +14,8 @@ docker run --rm -p 8080:80 syseleven/k8s-workshop-web-application:1.0.0
 ```
 
 * Go to http://localhost:8080
-* Deploy application and service
+
+* Now deploy the application and a service to kubernetes
 
 ```shell
 kubectl create ns <MY-NAMESPACE>
@@ -23,6 +24,7 @@ kubectl apply -f web-application/deployment/
 ```
 
 * Get external IP from LoadBalancer Service
+* repeat this command until "EXTERNAL-IP" is no longer "<pending>" and finally gets a fix IP
 
 ```shell
 kubectl get service web-application
@@ -62,6 +64,7 @@ kubectl logs <WEB_APPLICATION_POD_NAME>
 
 ```shell
 kubectl exec -it <WEB_APPLICATION_POD_NAME> -- /bin/bash
+exit
 ```
 
 * Port Forwarding
