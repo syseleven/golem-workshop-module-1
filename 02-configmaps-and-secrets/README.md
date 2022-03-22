@@ -1,5 +1,12 @@
 # ConfigMaps and Secrets
 
+* If you haven´t done yet create and set your namespace
+
+```shell
+kubectl create ns <MY-NAMESPACE>
+kubectl config set-context --current --namespace=<MY-NAMESPACE>
+```
+
 * Deploy application
 
 ```shell
