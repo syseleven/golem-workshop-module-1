@@ -24,7 +24,7 @@ kubectl apply -f web-application/deployment/
 ```
 
 * Get external IP from LoadBalancer Service
-* repeat this command until "EXTERNAL-IP" is no longer "<pending>" and finally gets a fix IP
+* repeat this command until "EXTERNAL-IP" is no longer "pending" and finally gets a fix IP
 
 ```shell
 kubectl get service web-application
