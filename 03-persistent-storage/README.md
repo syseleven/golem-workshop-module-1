@@ -3,8 +3,8 @@
 * Set proper context and namespace 
 
 ```sh
-kubectl create ns <YOUR-NAME>
-kubectl config set-context --current --namespace=<YOUR-NAMESPACE>
+kubectl create ns <MY-NAMESPACE>
+kubectl config set-context --current --namespace=<MY-NAMESPACE>
 ```
 
 * Show available storageclasses
