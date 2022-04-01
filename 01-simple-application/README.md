@@ -19,6 +19,7 @@ docker run --rm -p 8080:80 syseleven/k8s-workshop-web-application:1.0.0
 
 ```shell
 kubectl create ns <YOURNAME>
+kubectl label namespace <YOURNAME> golem-workshop=true
 kubectl config set-context --current --namespace=<YOURNAME>
 kubectl apply -f web-application/deployment/
 ```
