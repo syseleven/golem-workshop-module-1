@@ -21,6 +21,7 @@ kubectl get namespaces
 
 ```shell
 kubectl create namespace <YOURNAME>
+kubectl label namespace <YOURNAME> golem-workshop=true
 ```
 
 * Set default namespace to context
