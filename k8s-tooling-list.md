@@ -5,12 +5,12 @@
 - `kubectl` -> https://kubernetes.io/docs/tasks/tools/
 - `kubectx`/`kubens` -> https://github.com/ahmetb/kubectx
 - `helm` -> https://helm.sh/docs/intro/install/
+- `stern`-> https://github.com/stern/stern
 
 ## Extra
 
 - `k9s` -> https://github.com/derailed/k9s
 - Lens -> https://k8slens.dev/
-- Ranchder Desktop -> https://rancher.com/blog/2021/rancher-desktop-an-open-source-app-for-desktop-kubernetes-and-container-management
 - Web basierter Generator für K8S YMLs -> https://k8syaml.com/
 
 ## Docker (Ersatz/lizenztechnisches)
