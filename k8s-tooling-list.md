@@ -12,6 +12,9 @@
 - `k9s` -> https://github.com/derailed/k9s
 - Lens -> https://k8slens.dev/
 - Web basierter Generator für K8S YMLs -> https://k8syaml.com/
+- Tool zum Konvertieren von Deprecated API-Versionen in aktuelle API-Version -> https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-convert-plugin
+
+  Beispiel: `kubectl-convert -f ./my-deployment.yaml --output-version apps/v1`
 
 ## Docker (Ersatz/lizenztechnisches)
 
