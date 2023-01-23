@@ -64,6 +64,5 @@
 * To cleanup after this exercise you can optionally run
 
   ```shell
-  kubectl delete -f daemonset.yaml
-  kubectl delete -f statefulset.yaml
+  kubectl delete -f daemonset.yaml -f statefulset.yaml
   ```
