@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: demo-cron
+spec:
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - command:
+            - /bin/sh
+            - -c
+            - date; echo Hello from the cronjob
+            image: busybox
+            imagePullPolicy: IfNotPresent
+            name: demo-cron
+          restartPolicy: OnFailure
+  schedule: '*/2 * * * *'
