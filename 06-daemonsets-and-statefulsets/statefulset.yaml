@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: statefulset-demo
+  name: statefulset-demo
+spec:
+  replicas: 3
+  serviceName: nginx-sts
+  selector:
+    matchLabels:
+      app: statefulset-demo
+  template:
+    metadata:
+      labels:
+        app: statefulset-demo
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-sts
+  labels:
+    app: nginx-sts
+spec:
+  ports:
+  - port: 80
+    name: web
+  selector:
+    app: statefulset-demo
