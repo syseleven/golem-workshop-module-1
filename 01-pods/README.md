@@ -34,7 +34,28 @@
   kubectl apply -f pod.yaml
   ```
 
-* List the pods again to verify creation of the pod
+  <details><summary>Contents of pod.yaml</summary>
+
+  ```yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: my-declarative-nginx
+  spec:
+    containers:
+    - name: nginx
+      image: nginx
+  ```
+
+  </details>
+
+* <details><summary>List the pods again to verify creation of the pod</summary>
+
+  ```shell
+  kubectl get pods
+  ```
+
+  </details>
 
 ### Get information on the pods
 
@@ -56,13 +77,21 @@
   kubectl logs <POD_NAME>
   ```
 
+  <details><summary>Hint: You can also use the -f flag to interactively follow the logs of a pod</summary>
+
+  ```shell
+  kubectl logs -f <POD_NAME>
+  ```
+
+  </details>
+
 * Optional: Get an interactive shell in one of the pods (substitute `<POD_NAME>` with a real name of a pod currently running)
 
   ```shell
   kubectl exec -ti <POD_NAME> -- bash
   ```
 
-### Cleanup and delete the pods
+### Optional: Cleanup and delete the pods
 
 * Delete a pod via an imperative command
 
