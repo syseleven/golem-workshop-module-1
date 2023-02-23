@@ -44,7 +44,7 @@
 
 ### Inspect the differences
 
-* Note how both DaemonSets and StatefulSets do not use/create a ReplicaSet
+* Note how both DaemonSets and StatefulSets do not use/create a ReplicaSet like Deployments do
 
   ```shell
   kubectl get rs
@@ -58,6 +58,8 @@
     ```shell
     kubectl get pods
     ```
+
+* Optionally use `kubectl describe` to investigate the resources further
 
 ### Optional: Cleanup
 

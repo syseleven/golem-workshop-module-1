@@ -22,7 +22,15 @@
   kubectl apply -f deployment-web.yaml
   ```
 
-* Inspect the created deployment and the underlying resources
+* <details><summary>Inspect the created deployment and the underlying resources</summary>
+
+  ```shell
+  kubectl get -f deployment-web.yaml
+  kubectl get pods
+  kubectl get rs
+  ```
+
+  </details>
 
 ### Make the deployment publically available
 
@@ -33,15 +41,15 @@
   ```
 
 * Get external IP from LoadBalancer Service
-  (repeat this command until "EXTERNAL-IP" is no longer "pending" and finally gets a fix IP)
+  (watch this command until "EXTERNAL-IP" is no longer "pending" and finally gets a fix IP)
 
   ```shell
-  kubectl get service web-application
+  kubectl get service web-application -w
   ```
 
-* Go to `http://<IP_ADDRESS>`
+* Browse the website `http://<IP_ADDRESS>` or curl the website with `curl http://<IP_ADDRESS>`
 
-### Make the deployment internally available
+### Make the deployment (only) internally available
 
 * Create a service (type ClusterIp) with the file `service-clusterip.yaml`
 
@@ -61,7 +69,9 @@
     curl http://web-application-int
     ```
 
-  * *Note that the services can be reached via DNS cluser internally: serviceName.namespace.svc.cluster.local*
+  * *Note that all services can be reached via DNS cluser internally: serviceName.namespace.svc.cluster.local*
+
+  * Exit the debugging pod
 
 ### Make the deployment reachable on work station for debugging
 

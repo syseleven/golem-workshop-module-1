@@ -19,9 +19,7 @@
 * Deploy application with configmap and secret
 
   ```shell
-  kubectl apply -f secret.yaml
-  kubectl apply -f configmap.yaml
-  kubectl apply -f deployment.yaml
+  kubectl apply -f secret.yaml -f configmap.yaml -f deployment.yaml
   ```
 
 ### Investigate the setup
@@ -46,11 +44,24 @@
   kubectl get secrets web-application-secret -o jsonpath='{.data.passcode\.txt}' | base64 -d
   ```
 
-* See how the configmap and secret are being used inside the deployment
+* See how the configmap and secret are being injected inside the deployment
 
   ```shell
   kubectl get deployment web-application -o yaml
   ```
+
+* Fetch the IP address of your LB service again
+  and browse the website `http://<IP_ADDRESS>`
+  or curl the website with `curl http://<IP_ADDRESS>`
+
+* <details><summary>Optionally connect to the app pod and look at the index.php</summary>
+
+  ```shell
+  kubectl get pods
+  kubectl exec web-application-xxxx-xx -- cat index.php
+  ```
+
+  </details>
 
 ### Optional: Cleanup
 

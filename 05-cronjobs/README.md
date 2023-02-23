@@ -43,10 +43,13 @@
   ```
 
 * Also take note of how every cronjob run creates a job which creates a pod
+  (be patient it may take two minutes)
 
   ```shell
   kubectl get jobs,pods
   ```
+
+* Optionally inspect the resources created by this exercise
 
 ### Optional: clean up and delete the cronjob
 
