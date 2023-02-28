@@ -9,23 +9,20 @@ In diesem Dive-In Workshop bekommt ihr einen Überblick über das Basiskonzept v
 To participate in our workshops you will require the following items on your notebook:
 
 * Linux, MacOS or Windows idealy with an administrator access
-* SSH key pair (public and private key)
-* [Create SSH key pair](https://www.ssh.com/ssh/keygen/)
-* Docker desktop software
-* [Install Docker desktop Windows](https://docs.docker.com/docker-for-windows/install/)
-* [Install Docker desktop MacOS](https://docs.docker.com/docker-for-mac/install/)
 * kubernetes client software kubectl
-* [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-* kubectx context management tool
-* [Install kubectx](https://github.com/ahmetb/kubectx/)
+  * [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * helm client software version 3.x
-* [Install helm](https://helm.sh/docs/intro/install)
+  * [Install helm](https://helm.sh/docs/intro/install)
+* Optionally: kubectx context management tool
+  * [Install kubectx](https://github.com/ahmetb/kubectx/)
+* Optionally: Docker desktop software
+  * [Install Docker desktop Windows](https://docs.docker.com/docker-for-windows/install/)
+  * [Install Docker desktop MacOS](https://docs.docker.com/docker-for-mac/install/)
 
 ## Extra
 
 - `k9s` -> https://github.com/derailed/k9s
 - Lens -> https://k8slens.dev/
-- Ranchder Desktop -> https://rancher.com/blog/2021/rancher-desktop-an-open-source-app-for-desktop-kubernetes-and-container-management
 - Web basierter Generator für K8S YMLs -> https://k8syaml.com/
 
 ## Docker (Ersatz/lizenztechnisches)
