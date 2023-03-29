@@ -52,6 +52,11 @@
   kubectl get replicaset
   kubectl get pod
   ```
+* Alternatively you can output all objects at once by using a comma sparated list
+  
+  ```shell
+  kubectl get deploy,rs,pod
+  ```
 
   </details>
 
