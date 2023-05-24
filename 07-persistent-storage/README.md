@@ -115,5 +115,5 @@
 * To cleanup after this exercise you can optionally run
 
   ```shell
-  kubectl delete -f svc.yaml -f deployment.yaml -f pvc.yaml
+  kubectl delete -f service.yaml -f deployment.yaml -f pvc.yaml
   ```
