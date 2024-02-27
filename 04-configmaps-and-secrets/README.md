@@ -53,7 +53,11 @@
 * Fetch the IP address of your LB service again
   and browse the website `http://<IP_ADDRESS>`
   or curl the website with `curl http://<IP_ADDRESS>`.
-  * If you already deleted the LB - create a port forward to the service
+  * If you already deleted the LB - create a port forward to the pod before
+
+  ```shell
+  kubectl port-forward pods/web-application-<xxxxxxx> 8080:80
+  ```
 
 * <details><summary>Optionally connect to the app pod and look at the index.php</summary>
 
