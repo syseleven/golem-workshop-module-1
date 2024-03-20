@@ -6,11 +6,12 @@
 
   ```shell
   kubectl create ns <YOURNAME>
-  kubectl label namespace <YOURNAME> golem-workshop=true
   kubectl config set-context --current --namespace=<YOURNAME>
   ```
 
 * Clone this repository to your working station and change into the directory for this exercise
+
+---
 
 ## Exercise
 

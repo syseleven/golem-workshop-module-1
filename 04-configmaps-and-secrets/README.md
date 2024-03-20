@@ -6,11 +6,12 @@
 
   ```shell
   kubectl create ns <YOURNAME>
-  kubectl label namespace <YOURNAME> golem-workshop=true
   kubectl config set-context --current --namespace=<YOURNAME>
   ```
 
 * Clone this repository to your working station and change into the directory for this exercise
+
+---
 
 ## Exercise
 
@@ -55,9 +56,11 @@
   or curl the website with `curl http://<IP_ADDRESS>`.
   * If you already deleted the LB - create a port forward to the pod before
 
-  ```shell
-  kubectl port-forward pods/web-application-<xxxxxxx> 8080:80
-  ```
+    ```shell
+    kubectl port-forward pods/web-application-<xxxxxxx> 8080:80
+    ```
+    
+    * then visit the URL http://localhost:8080 or `curl http://localhost:8080`
 
 * <details><summary>Optionally connect to the app pod and look at the index.php</summary>
 

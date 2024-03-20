@@ -6,11 +6,12 @@
 
   ```shell
   kubectl create ns <YOURNAME>
-  kubectl label namespace <YOURNAME> golem-workshop=true
   kubectl config set-context --current --namespace=<YOURNAME>
   ```
 
 * Clone this repository to your working station and change into the directory for this exercise
+
+---
 
 ## Exercise
 
@@ -55,7 +56,7 @@
   kubectl exec -it <POD> -- /bin/bash
   ```
 
-  * Inside Container run th following
+  * Inside Container run the following
   
     ```sh
     curl localhost # should response with 403 Forbidden since NGINX is not allowed to list directory and no index.html is available
@@ -66,7 +67,7 @@
     <!DOCTYPE html>
     <html>
     <head>
-    <title>Welcome to the Golem Dive-in Kubernetes workshop!</title>
+    <title>Welcome to the workshop!</title>
     <style>
     html { color-scheme: light dark; }
     body { width: 35em; margin: 0 auto;
@@ -74,7 +75,7 @@
     </style>
     </head>
     <body>
-    <h1>Welcome to the Golem Dive-in Kubernetes workshop!</h1>
+    <h1>Welcome to the workshop!</h1>
     
     <p><em>Thank you!</em></p>
     </body>

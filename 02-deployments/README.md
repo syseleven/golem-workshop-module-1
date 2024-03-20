@@ -6,17 +6,18 @@
 
   ```shell
   kubectl create ns <YOURNAME>
-  kubectl label namespace <YOURNAME> golem-workshop=true
   kubectl config set-context --current --namespace=<YOURNAME>
   ```
 
 * Clone this repository to your working station and change into the directory for this exercise
 
+---
+
 ## Exercise
 
 ### Creating deployments
 
-* Create a deployments via an imperative command
+* Create a deployment via an imperative command
 
   ```shell
   kubectl create deployment --image=nginx --replicas=2 nginx-deploy
@@ -154,3 +155,12 @@ Which one you use comes down to the circumstances and personal preference.
   ```shell
   kubectl delete deployments nginx-deploy declarative-deploy
   ```
+
+---
+
+## Conclusion
+
+* you are now able to create pods which are controlled by a replicaset and a deployment
+* your understand how scaling of pod replicas works
+* you can now edit and change specific elements of a deployment such as the image
+* deployments are very often used and are a very common resource to create and control workloads

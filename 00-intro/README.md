@@ -1,14 +1,25 @@
 # Namespaces
 
-* Download kubeconfig
+* Download kubeconfig (link will be provided by instructors)
 * Copy kubeconfig to `~/.kube/config`
 * Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
-* Try connection
 
 * Check versions of local installation and remote server
   
 ```shell
 kubectl version
+```
+
+* Verify kubectl uses your kubeconfig file by default
+
+```shell
+kubectl config view
+```
+
+* Try to connect
+
+```shell
+kubectl get nodes
 ```
 
 * List Namespaces
@@ -21,7 +32,6 @@ kubectl get namespaces
 
 ```shell
 kubectl create namespace <YOURNAME>
-kubectl label namespace <YOURNAME> golem-workshop=true
 ```
 
 * Set default namespace to context
