@@ -6,11 +6,12 @@
 
   ```shell
   kubectl create ns <YOURNAME>
-  kubectl label namespace <YOURNAME> golem-workshop=true
   kubectl config set-context --current --namespace=<YOURNAME>
   ```
 
 * Clone this repository to your working station and change into the directory for this exercise
+
+---
 
 ## Exercise
 
@@ -90,6 +91,11 @@
   ```shell
   kubectl exec -ti <POD_NAME> -- bash
   ```
+  * Leave the container
+  
+    ```shell
+    root@my-nginx:/# exit
+    ```
 
 ### Optional: Cleanup and delete the pods
 
@@ -104,3 +110,11 @@
   ```shell
   kubectl delete -f pod.yaml
   ```
+
+---
+
+## Conclusion
+
+* you are now able to create and delete pods manually and the declarative way
+* you can obtain detailed information of the pod's metadata and configuration
+* you can view live logs of a pod's container(s)

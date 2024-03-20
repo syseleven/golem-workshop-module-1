@@ -6,11 +6,12 @@
 
   ```shell
   kubectl create ns <YOURNAME>
-  kubectl label namespace <YOURNAME> golem-workshop=true
   kubectl config set-context --current --namespace=<YOURNAME>
   ```
 
 * Clone this repository to your working station and change into the directory for this exercise
+
+---
 
 ## Exercise
 
@@ -47,11 +48,11 @@
   kubectl get service web-application -w
   ```
 
-* Browse the website `http://<IP_ADDRESS>` or curl the website with `curl http://<IP_ADDRESS>`
+* Visit the URL `http://<IP_ADDRESS>` or curl the website with `curl http://<IP_ADDRESS>`
 
 ### Make the deployment (only) internally available
 
-* Create a service (type ClusterIp) with the file `service-clusterip.yaml`
+* Create a service (of type ClusterIP) with the file `service-clusterip.yaml`
 
   ```shell
   kubectl apply -f service-clusterip.yaml
@@ -73,7 +74,7 @@
 
   * Exit the debugging pod
 
-### Make the deployment reachable on work station for debugging
+### Make the deployment reachable on your work station for debugging purposes
 
 * Port Forwarding
 
