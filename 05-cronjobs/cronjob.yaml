@@ -17,4 +17,4 @@ spec:
             imagePullPolicy: IfNotPresent
             name: demo-cron
           restartPolicy: OnFailure
-  schedule: '*/2 * * * *'
+  schedule: '*/1 * * * *'
