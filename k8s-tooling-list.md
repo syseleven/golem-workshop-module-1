@@ -11,7 +11,9 @@
 - `kubectl-df-pv` -> <https://github.com/yashbhutwala/kubectl-df-pv>
 - `kubectl-get-all` -> <https://github.com/corneliusweig/ketall>
 - `helm` -> <https://helm.sh/docs/intro/install/>
-- `stern`-> <https://github.com/stern/stern>
+- `stern` -> <https://github.com/stern/stern>
+- `kubectl` quick reference -> <https://kubernetes.io/docs/reference/kubectl/quick-reference/>
+- `kubectl` completion -> <https://kubernetes.io/docs/reference/kubectl/generated/kubectl_completion/>
 
 ## Extra
 
